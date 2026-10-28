@@ -1,0 +1,15 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(30, 80, 140, 0.28), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(62, 203, 255, 0.08), transparent 50%),
+    radial-gradient(ellipse 40% 35% at 10% 60%, rgba(232, 184, 74, 0.05), transparent 55%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-navy) 45%, var(--bg-deep) 100%);
+}
+
+.app__content {
+  position: relative;
+  z-index: 1;
+}

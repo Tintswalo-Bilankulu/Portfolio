@@ -1,0 +1,57 @@
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.skills__group {
+  padding: 1.45rem;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius);
+  background: rgba(8, 14, 28, 0.55);
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.skills__group:hover {
+  border-color: rgba(62, 203, 255, 0.35);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.skills__group-title {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--electric);
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.skills__chip {
+  padding: 0.42rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(62, 203, 255, 0.12);
+  background: rgba(62, 203, 255, 0.05);
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .skills__groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__group:hover {
+    transform: none;
+  }
+}
