@@ -9,11 +9,16 @@ function ProjectCard({
   icon = 'hex',
   logo,
   logoAlt = '',
+  logoBanner = false,
 }) {
   return (
     <article className="project-card">
       {logo && (
-        <img className="project-card__logo" src={logo} alt={logoAlt} />
+        <img
+          className={`project-card__logo${logoBanner ? ' project-card__logo--banner' : ''}`}
+          src={logo}
+          alt={logoAlt}
+        />
       )}
       <div className="project-card__meta">
         {tags.map((tag) => (

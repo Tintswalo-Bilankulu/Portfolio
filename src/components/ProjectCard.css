@@ -43,6 +43,10 @@
   object-fit: contain;
 }
 
+.project-card__logo--banner {
+  border-radius: 12px;
+}
+
 .project-card__meta {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,5 @@
 import ProjectCard from './ProjectCard'
+import coinblissLogo from '../assets/coinbliss-logo.png'
 import './Projects.css'
 
 const PROJECTS = [
@@ -18,11 +19,14 @@ const PROJECTS = [
     id: 'coinbliss',
     title: 'CoinBliss',
     summary:
-      'A personal finance app concept focused on clearer money awareness and thoughtful digital habits. This is a concept exploration — not a released application.',
+      'A student-finance app concept built around the line “Empowering Student Finances, One Coin at a Time.” This is a concept exploration — not a released application.',
     tags: ['Concept', 'FinTech idea'],
     statusLabel: 'App concept',
     accent: 'electric',
     icon: 'coin',
+    logo: coinblissLogo,
+    logoAlt: 'CoinBliss. Empowering Student Finances, One Coin at a Time.',
+    logoBanner: true,
   },
   {
     id: 'policy-research',

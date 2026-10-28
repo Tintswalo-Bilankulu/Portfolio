@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import portrait from '../assets/tintswalo.png'
 import './About.css'
 
 const FOCUS_AREAS = [
@@ -9,6 +11,23 @@ const FOCUS_AREAS = [
 ]
 
 function About() {
+  const [photoOpen, setPhotoOpen] = useState(false)
+
+  useEffect(() => {
+    if (!photoOpen) return undefined
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setPhotoOpen(false)
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [photoOpen])
+
   return (
     <section className="section about" id="about" aria-labelledby="about-title">
       <div className="section__inner">
@@ -23,12 +42,19 @@ function About() {
 
         <div className="about__grid">
           <figure className="about__portrait">
-            <img
-              src="/tintswalo.jpg"
-              alt="Tintswalo Bilankulu wearing graduation regalia and holding a bouquet"
-              width="400"
-              height="400"
-            />
+            <button
+              type="button"
+              className="about__portrait-button"
+              onClick={() => setPhotoOpen(true)}
+            >
+              <img
+                src={portrait}
+                alt="Tintswalo Bilankulu wearing graduation regalia and holding a bouquet"
+                width="400"
+                height="400"
+              />
+              <span className="about__portrait-hint">View photo</span>
+            </button>
             <figcaption>Tintswalo Bilankulu</figcaption>
           </figure>
 
@@ -70,6 +96,35 @@ function About() {
           </aside>
         </div>
       </div>
+
+      {photoOpen && (
+        <div
+          className="portrait-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Portrait of Tintswalo Bilankulu"
+        >
+          <button
+            type="button"
+            className="portrait-lightbox__backdrop"
+            aria-label="Close portrait"
+            onClick={() => setPhotoOpen(false)}
+          />
+          <figure className="portrait-lightbox__frame">
+            <img
+              src={portrait}
+              alt="Tintswalo Bilankulu wearing graduation regalia and holding a bouquet"
+            />
+            <button
+              type="button"
+              className="portrait-lightbox__close"
+              onClick={() => setPhotoOpen(false)}
+            >
+              Close
+            </button>
+          </figure>
+        </div>
+      )}
     </section>
   )
 }
