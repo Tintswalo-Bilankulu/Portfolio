@@ -81,68 +81,12 @@
   min-height: 320px;
 }
 
-.hero__orbit {
-  position: absolute;
-  width: min(100%, 360px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(62, 203, 255, 0.2);
-  border-radius: 50%;
-  animation: orbit-spin 28s linear infinite;
-}
-
-.hero__orbit::before,
-.hero__orbit::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--electric);
-  box-shadow: 0 0 12px var(--electric-glow);
-}
-
-.hero__orbit::before {
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero__orbit::after {
-  bottom: 18%;
-  right: 10%;
-  background: var(--amber);
-  box-shadow: 0 0 12px rgba(232, 184, 74, 0.5);
-}
-
-.hero__hex-core {
+.hero__logo {
   position: relative;
-  width: min(78%, 260px);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  animation: float-soft 6s ease-in-out infinite;
-}
-
-.hero__hex-core svg {
-  width: 100%;
+  width: min(100%, 480px);
   height: auto;
-  filter: drop-shadow(0 0 28px rgba(62, 203, 255, 0.28));
-}
-
-.hero__badge {
-  position: absolute;
-  bottom: 8%;
-  left: 4%;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--border-glass);
-  border-radius: 999px;
-  background: rgba(8, 16, 32, 0.7);
-  backdrop-filter: blur(10px);
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+  filter: drop-shadow(0 0 28px rgba(62, 203, 255, 0.22));
+  animation: float-soft 6s ease-in-out infinite;
 }
 
 @keyframes pulse-dot {
@@ -154,12 +98,6 @@
   50% {
     opacity: 1;
     transform: scale(1.25);
-  }
-}
-
-@keyframes orbit-spin {
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -184,20 +122,14 @@
     min-height: 260px;
   }
 
-  .hero__orbit {
-    width: min(100%, 280px);
-  }
-
-  .hero__badge {
-    left: 50%;
-    transform: translateX(-50%);
+  .hero__logo {
+    width: min(100%, 420px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__eyebrow-dot,
-  .hero__orbit,
-  .hero__hex-core {
+  .hero__logo {
     animation: none !important;
   }
 }

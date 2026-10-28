@@ -34,23 +34,13 @@ function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
         <a className="navbar__brand" href="#home" onClick={handleNavClick}>
-          <svg
+          <img
             className="navbar__mark"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M16 3 L28 10 V22 L16 29 L4 22 V10 Z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            />
-            <path
-              d="M16 10 L21 13 V19 L16 22 L11 19 V13 Z"
-              fill="#e8b84a"
-            />
-          </svg>
+            src="/beelas-mark.png"
+            alt=""
+            width="314"
+            height="271"
+          />
           <span className="navbar__brand-text">
             Tintswalo <span className="navbar__brand-accent">Bilankulu</span>
           </span>

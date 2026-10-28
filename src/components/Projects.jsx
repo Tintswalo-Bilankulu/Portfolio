@@ -6,11 +6,13 @@ const PROJECTS = [
     id: 'beelas',
     title: 'Beelas',
     summary:
-      'A personal brand and concept space exploring connected systems, hexagonal structure, and a distinctive visual identity. Beelas represents an early design direction rather than a finished commercial product.',
+      'A personal brand and concept built around the line “Smarter systems. Faster buzz.” It explores connected systems, hexagonal structure, and a distinctive visual identity. Beelas is an early design direction rather than a finished commercial product.',
     tags: ['Concept', 'Identity'],
     statusLabel: 'Personal concept & identity',
     accent: 'amber',
     icon: 'bee',
+    logo: '/beelas-logo.png',
+    logoAlt: 'Beelas logo',
   },
   {
     id: 'coinbliss',

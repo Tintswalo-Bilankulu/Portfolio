@@ -7,9 +7,14 @@ function ProjectCard({
   statusLabel,
   accent = 'electric',
   icon = 'hex',
+  logo,
+  logoAlt = '',
 }) {
   return (
     <article className="project-card">
+      {logo && (
+        <img className="project-card__logo" src={logo} alt={logoAlt} />
+      )}
       <div className="project-card__meta">
         {tags.map((tag) => (
           <span
@@ -26,6 +31,7 @@ function ProjectCard({
 
       <div className="project-card__footer">
         <span className="project-card__label">{statusLabel}</span>
+        {!logo && (
         <svg
           className="project-card__icon"
           viewBox="0 0 32 32"
@@ -67,6 +73,7 @@ function ProjectCard({
             />
           )}
         </svg>
+        )}
       </div>
     </article>
   )

@@ -38,15 +38,15 @@
 }
 
 .navbar__mark {
-  width: 2rem;
-  height: 2rem;
-  color: var(--electric);
+  width: 2.75rem;
+  height: 2.35rem;
+  object-fit: contain;
   filter: drop-shadow(0 0 8px var(--electric-glow));
   transition: transform 0.3s ease;
 }
 
 .navbar__brand:hover .navbar__mark {
-  transform: rotate(12deg) scale(1.05);
+  transform: scale(1.06);
 }
 
 .navbar__brand-text {

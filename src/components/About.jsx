@@ -22,6 +22,16 @@ function About() {
         </p>
 
         <div className="about__grid">
+          <figure className="about__portrait">
+            <img
+              src="/tintswalo.jpg"
+              alt="Tintswalo Bilankulu wearing graduation regalia and holding a bouquet"
+              width="400"
+              height="400"
+            />
+            <figcaption>Tintswalo Bilankulu</figcaption>
+          </figure>
+
           <div className="about__text">
             <p>
               I am an IT and Computing graduate with a strong interest in how
@@ -38,9 +48,10 @@ function About() {
               intentional rather than overly complex.
             </p>
             <p>
-              The Beelas identity woven through this site reflects themes I care
-              about: networked collaboration, hexagonal structure, and building
-              with purpose — one connection at a time.
+              Beelas — “Smarter systems. Faster buzz.” — is the identity
+              running through this site. It reflects networked collaboration,
+              hexagonal structure, and building with purpose, one connection at
+              a time.
             </p>
           </div>
 

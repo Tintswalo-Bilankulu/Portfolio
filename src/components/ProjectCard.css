@@ -36,6 +36,13 @@
   box-shadow: 0 12px 40px rgba(62, 203, 255, 0.12);
 }
 
+.project-card__logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.1rem;
+  object-fit: contain;
+}
+
 .project-card__meta {
   display: flex;
   flex-wrap: wrap;
