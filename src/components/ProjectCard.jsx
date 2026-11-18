@@ -10,6 +10,8 @@ function ProjectCard({
   logo,
   logoAlt = '',
   logoBanner = false,
+  href,
+  linkLabel,
 }) {
   return (
     <article className="project-card">
@@ -33,6 +35,18 @@ function ProjectCard({
 
       <h3 className="project-card__title">{title}</h3>
       <p className="project-card__summary">{summary}</p>
+
+      {href && (
+        <a
+          className="project-card__link"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {linkLabel}
+          <span aria-hidden="true">↗</span>
+        </a>
+      )}
 
       <div className="project-card__footer">
         <span className="project-card__label">{statusLabel}</span>
